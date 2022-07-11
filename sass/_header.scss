@@ -1,0 +1,134 @@
+.header{
+  min-height: 100vh;
+  background-image: linear-gradient(var(--v-l-red), var(--l-red));
+  position: relative;
+  z-index: 1;
+  border-radius: 0 0 0 90px;
+  overflow: hidden;
+}
+.container{
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 60px 0;
+}
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.none{
+  display: none;
+}
+.header__textos{
+  text-align: center;
+  color: #fff;
+  margin:auto;
+}
+.header__titulo{
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+.header__parrafo{
+  margin-top: 1em;
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  padding: 0 10px;
+}
+.header__btn{
+  display: flex;
+  justify-content: space-evenly;
+  color: #fff;
+  padding: 0;
+}
+.btn{
+  border: 1px solid #fff;
+  border-radius: 30px;
+  padding: 12px 16px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: var(--tipo-secundaria);
+}
+.btn--active{
+  color: var(--l-red);
+  background-color: #fff;
+  border: none;
+}
+.img-patron{
+  content: " ";
+  position: absolute;
+  top: -225px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 165%;
+  z-index: -1;
+}
+
+//* Media Querys*//
+@media screen and (min-width: 550px) {
+  .nav__logo{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  .nav__menu{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  .nav__link{
+    color: #fff;
+    display: flex;
+    align-items: center;
+  }
+  .nav__link::after{
+    content: " ";
+    display:inline-block;
+    width: 20px;
+    height: 16px;
+    margin-left: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../img/icon-arrow-light.svg);
+  }
+  .nav__hamburguer{
+    display: none;
+  }
+  .nav__bottons{
+    display: flex;
+    gap: 10px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .nav__button{
+    background: transparent;
+    color: var(--l-red);
+    background-color: #fff;
+    padding: 10px 35px;
+    border-radius: 30px;
+  }
+  .nav__button--active{
+    background-color: transparent;
+    color: #fff;
+  }
+  .header__titulo{
+    font-size: 4rem;
+  }
+  .header__textos{
+    margin-top: 75px;
+  }
+  .header__parrafo{
+    font-size: 1.5rem;
+  }
+  .header__btn{
+    justify-content: center;
+    gap: 30px;
+  }
+
+  
+}
